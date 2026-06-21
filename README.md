@@ -936,78 +936,9 @@ streamlit run app.py --server.fileWatcherType none
 
 ---
 
-## 18. 后续优化方向
+## 18. 一键运行命令参考
 
-### 18.1 正式 RAG 升级
-
-当前检索是轻量级关键词检索，后续可以升级为：
-
-```text
-Embedding 模型
-向量数据库
-Chroma / FAISS
-metadata 权限过滤
-证据引用
-相似度召回
-```
-
-### 18.2 多人联机
-
-后续可以加入：
-
-```text
-用户 ID
-房间 ID
-数据库持久化
-WebSocket
-多人状态同步
-房主阶段控制
-多人提交最终推理
-```
-
-### 18.3 房间状态持久化
-
-当前主要依赖 Streamlit session_state。
-后续可以使用：
-
-```text
-SQLite
-Redis
-PostgreSQL
-```
-
-保存房间、消息、线索和最终答案。
-
-### 18.4 更强主持人 Agent
-
-主持人可以进一步拆分为：
-
-```text
-控场 Agent
-线索提醒 Agent
-节奏控制 Agent
-剧透检测 Agent
-最终复盘 Agent
-```
-
-### 18.5 剧本质量校验
-
-后续可以加入更严格的剧本校验器，检查：
-
-```text
-角色数量是否正确
-字段是否完整
-三幕线索是否足够
-最终真相是否明确
-评分标准是否总分 100
-线索是否能支撑真相
-```
-
----
-
-## 19. 一键运行命令参考
-
-### 19.1 启动本地 Qwen3 API
+### 18.1 启动本地 Qwen3 API
 
 ```bash
 cd /root/siton-data-guanchunxiangData/fuleihao/rag_ie_system_full
@@ -1020,7 +951,7 @@ nohup uvicorn qwen3_api_server:app \
   > qwen3_api.log 2>&1 &
 ```
 
-### 19.2 启动 Script2Game
+### 18.2 启动 Script2Game
 
 ```bash
 cd /root/siton-data-guanchunxiangData/fuleihao/script2game_v3_ui
@@ -1030,7 +961,7 @@ conda activate script2game
 streamlit run app.py --server.fileWatcherType none
 ```
 
-### 19.3 后台运行
+### 18.3 后台运行
 
 ```bash
 cd /root/siton-data-guanchunxiangData/fuleihao/script2game_v3_ui
@@ -1044,7 +975,7 @@ nohup streamlit run app.py \
 
 ---
 
-## 20. 总结
+## 19. 总结
 
 Script2Game 当前已经形成一个完整的 AI 剧本杀系统闭环：
 
